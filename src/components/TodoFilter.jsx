@@ -6,7 +6,7 @@ import { TodoContext } from '../TodoProvider/TodoContext';
   const { state, dispatch } = useContext(TodoContext);
   const { filter } = state;
 
-  const setFilter = useCallback((filter) => {
+  const set_Filter = useCallback((filter) => {
     dispatch({ type: 'SETFILTER', payload: filter });
   }, [dispatch]);
 
@@ -14,19 +14,19 @@ import { TodoContext } from '../TodoProvider/TodoContext';
     <div className="flex justify-center mb-4">
       <button
         className={`px-4 py-2 mx-1 rounded-lg ${filter === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}`}
-        onClick={() => setFilter('all')}
+        onClick={() => set_Filter('all')}
       >
         All
       </button>
       <button
         className={`px-4 py-2 mx-1 rounded-lg ${filter === 'active' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}`}
-        onClick={() => setFilter('active')}
+        onClick={() => set_Filter('active')}
       >
         Active
       </button>
       <button
         className={`px-4 py-2 mx-1 rounded-lg ${filter === 'completed' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}`}
-        onClick={() => setFilter('completed')}
+        onClick={() => set_Filter('completed')}
       >
         Completed
       </button>

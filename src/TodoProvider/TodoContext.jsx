@@ -6,11 +6,6 @@ const initialState = JSON.parse(localStorage.getItem('todos')) || {
   todos: [],
   filter: 'all', // all, active, completed
 };
-
-// const ADD_TODO = 'ADD_TODO';
-// const REMOVE_TODO = 'REMOVE_TODO';
-// const TOGGLE_TODO = 'TOGGLE_TODO';
-// const SET_FILTER = 'SET_FILTER';
 function todoReducer(state, action) {
   switch (action.type) {
     case "ADD":

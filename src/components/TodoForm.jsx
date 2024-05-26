@@ -5,24 +5,24 @@ import AddIcon from '@material-ui/icons/AddCircle'
 
  function TodoForm() {
   const { dispatch } = useContext(TodoContext);
-  const inptRef = useRef();
+  const inputRef = useRef();
 
-  const handleSubmit = (e) => {
+  const handle_Submit = (e) => {
     e.preventDefault();
     const newTodo = {
       id: Date.now(),
-      text: inptRef.current.value,
+      text: inputRef.current.value,
       completed: false,
     };
     dispatch({ type: 'ADD', payload: newTodo });
-    inptRef.current.value = '';
+    inputRef.current.value = '';
   };
 
   return (
-    <form className="flex justify-center items-center mb-4" onSubmit={handleSubmit}>
+    <form className="flex justify-center items-center mb-4" onSubmit={handle_Submit}>
       <input
         type="text"
-        ref={inptRef}
+        ref={inputRef}
         className="p-2 border border-gray-300 rounded-lg w-72 mr-2"
         placeholder="Add a new todo"
       />
