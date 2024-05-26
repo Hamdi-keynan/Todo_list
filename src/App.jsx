@@ -4,7 +4,6 @@ import { TodoProvider } from './TodoProvider/TodoContext';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import TodoFilter from './components/TodoFilter';
-import logo from './logo.png'
 
 function App() {
   return (
